@@ -9,7 +9,7 @@ const {
 const getTasksCtrl = async (req, res, next) => {
   try {
     const tasks = await getAllTasks();
-    res.json(tasks);
+    res.send(tasks);
   } catch (error) {
     next(error);
   }
